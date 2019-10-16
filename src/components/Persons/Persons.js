@@ -38,7 +38,8 @@ class Persons extends Component {
 
     render() {
         console.log('[Person.js] rendering...');
-        return this.props.persons.map((person, index) => {
+        return (
+        this.props.persons.map((person, index) => {
 
          return (
             <Person
@@ -48,7 +49,7 @@ class Persons extends Component {
             key={person.id}
             changed={(event) => this.props.changed(event, person.id)}/>
         );
-    });
+    }));
     }
 }
 
